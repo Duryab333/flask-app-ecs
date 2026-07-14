@@ -29,7 +29,7 @@ jobs:
               uses: actions/checkout@v7
 
             #- name: Set up Docker
-            #  uses: docker/setup-docker-action@v5
+            #  uses: docker/setup-buildx-action@v4
             - name: docker veriosn
               run: docker --version
 
@@ -41,6 +41,7 @@ jobs:
             - name: build and push 
               uses: docker/build-push-action@v7
               with:
+                push: true
                 context: . 
                 tags: | 
                     ${{vars.DOCKER_USER}}/flask-app:latest
