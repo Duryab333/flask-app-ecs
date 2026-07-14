@@ -6,7 +6,7 @@ on:
     
 jobs:
     build:
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         steps:
             - name: checkout code
               uses: actions/checkout@v7
@@ -20,20 +20,10 @@ jobs:
                 python -m pip install -r requirements.txt
             #- name: testing
             #  run: python app.py
-            - name: docker install
-              run: |
-                sudo apt update  
-                sudo apt install docker.io -y
-                sudo systemctl start docker
-                sudo systemctl enable docker
-                sudo usermod -aG docker $USER
-                newgrp docker <<EOF
-                docker run hello-world
-                EOF
 
     buid_push:
         needs: [build]
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         steps:
             - name: checkout code
               uses: actions/checkout@v7
