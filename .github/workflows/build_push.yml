@@ -31,6 +31,7 @@ jobs:
             - name: build and push 
               uses: docker/build-push-action@v7
               with:
+                context: . 
                 tags: | 
                     ${{vars.DOCKER_USER}}/flask-app:latest
                     ${{vars.DOCKER_USER}}/flask-app:${{github.sha}}
