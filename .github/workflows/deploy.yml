@@ -3,7 +3,7 @@ name: deploy
 on:
   workflow_run:
     workflows:
-      - " Build and push"
+      - "Build and push"
     types:
       - completed
       
