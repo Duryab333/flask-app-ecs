@@ -45,7 +45,7 @@ jobs:
                 context: . 
                 tags: | 
                     ${{vars.DOCKER_USER}}/flask-app:latest
-                    ${{vars.DOCKER_USER}}/flask-app:${{github.head_sha}}
+                    ${{vars.DOCKER_USER}}/flask-app:${{github.sha}}
 
 
 

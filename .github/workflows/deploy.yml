@@ -12,7 +12,7 @@ jobs:
         runs-on: self-hosted
         env: 
             DOCKER_USER: ${{vars.DOCKER_USER}}
-            IMAGE_TAG: ${{github.head_sha}}
+            IMAGE_TAG: ${{github.sha}}
         steps:
             - name : checkout code
               uses: actions/checkout@v7
