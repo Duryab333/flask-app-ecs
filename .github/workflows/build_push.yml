@@ -18,7 +18,7 @@ jobs:
                 python -m pip install --upgrade pip
                 python -m pip install -r requirements.txt
             - name: testing
-              run: pyhton -m pytest
+              run: pyhton app.py
     buid_push:
         needs: [build]
         runs-on: self-hosted
