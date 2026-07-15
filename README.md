@@ -10,7 +10,7 @@ Part of the [TrainWithShubham](https://github.com/TrainWithShubham) — DevOps Z
 ![AWS ECS](https://img.shields.io/badge/AWS-ECS-FF9900)
 
 ## Features
-
+wil add
 - Responsive landing page with modern glassmorphism UI
 - `/health` endpoint for ECS load balancer health checks
 - Two Dockerfiles — simple and multistage (distroless)
